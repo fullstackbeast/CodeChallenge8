@@ -10,7 +10,7 @@ namespace CodeChallenge8
         {
             Console.WriteLine(CountTripLet(new[] { 4, 0, 1, 3, 2 }, new[] { 4, 1, 0, 2, 3 }));
         }
-
+ 
 
         static int CountTripLet(int[] nums1, int[] nums2)
         {
@@ -19,10 +19,10 @@ namespace CodeChallenge8
             var validListCount = result
                 .Select(triplet =>
                     triplet.ToList())
-                .Count(t => Array.IndexOf<int>(nums1, t[0]) < Array.IndexOf<int>(nums1, t[1])
-                            && Array.IndexOf<int>(nums1, t[1]) < Array.IndexOf<int>(nums1, t[2])
-                            && Array.IndexOf<int>(nums2, t[0]) < Array.IndexOf<int>(nums2, t[1])
-                            && Array.IndexOf<int>(nums2, t[1]) < Array.IndexOf<int>(nums2, t[2]));
+                .Count(t => Array.IndexOf(nums1, t[0]) < Array.IndexOf(nums1, t[1])
+                            && Array.IndexOf(nums1, t[1]) < Array.IndexOf(nums1, t[2])
+                            && Array.IndexOf(nums2, t[0]) < Array.IndexOf(nums2, t[1])
+                            && Array.IndexOf(nums2, t[1]) < Array.IndexOf(nums2, t[2]));
             
             return validListCount;
         }
